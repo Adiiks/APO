@@ -1,48 +1,58 @@
+from account import *
+
 class ServerMock:
     accounts = [
-        {"cardData": "abc", "pin": 1234, "money": 1000, "accountNumber": 1},
-        {"cardData": "def", "pin": 1234, "money": 2000, "accountNumber": 2}
+        Account("abc", 1234, 1000, 1),
+        Account("def", 1234, 2000, 2)
     ]
 
     def __init__(self):
         pass
     
-    def validate(self, accountData):
-        return not not self.get_account(accountData)
+    def validate(self, auth_data):
+        return not not self.get_account_by_auth_data(auth_data)
 
-    def deposit(self, value, accountData):
-        account = self.get_account(accountData)
+    def deposit(self, value, auth_data):
+        account = self.get_account_by_auth_data(auth_data)
         if account:
-            account["money"] += value
+            account.money += value
+            return True
+        return False
     
-    def withdraw(self, value, accountData):
-        account = self.get_account(accountData)
+    def withdraw(self, value, auth_data):
+        account = self.get_account_by_auth_data(auth_data)
         if account:
-            if account["money"] >= value:
-                account["money"] -= value
+            if account.money >= value:
+                account.money -= value
+                return True
+        return False
     
-    def get_money_amount(self, accountData):
-        account = self.get_account(accountData)
+    def get_money_amount(self, auth_data):
+        account = self.get_account_by_auth_data(auth_data)
         if account:
-            return account["money"]
+            return account.money
+        return False
     
-    def transfer(self, value, accountData, receiver):
-        account = self.get_account(accountData)
-        for a in self.account:
-            if a["accountNumber"] == receiver:
-                receiverAccount = a
-        if account and receiverAccount and account["money"] >= value:
-            account["money"] -= value
-            receiverAccount["money"] += value
+    def transfer(self, value, auth_data, receiver):
+        account = self.get_account_by_auth_data(auth_data)
+        receiverAccount = self.get_account_by_number(receiver)
+        if account and receiverAccount and account.money >= value:
+            account.money -= value
+            receiverAccount.money += value
+            return True
+        return False
 
-    
-    def get_account(self, accountData, notAuth = False):
+    #private
+    def get_account_by_auth_data(self, auth_data):
         for a in self.accounts:
-            if a["cardData"] == accountData["cardData"]:
-                if notAuth or a["pin"] == accountData["pin"]:
-                    return a
-                else:
-                    return None
+            if a.card_data == auth_data.card_data and a.pin == auth_data.pin:
+                return a
+        return None
+    
+    def get_account_by_number(self, number):
+        for a in self.accounts:
+            if a.number == number:
+                return a
         return None
 
 server = ServerMock()
