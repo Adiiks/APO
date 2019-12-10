@@ -1,24 +1,24 @@
-użytkownik wkłada kartę
-użytkownik wprowadza pin
-użytkownik wybiera opcje dokonania przelewu
-użytkownik wprowadza dane potrzebne do wykonania przelewu(tytuł,numer konta odbiorcy,kwotę)
-użytkownik zleca wykonanie przelewu
-użytkownik odbiera potwierdzenie
-użytkownik odbiera karte
-użytkownik wybiera opcje wypłaty pieniedzy
-użytkownik podaje kwote wypłaty 
-użytkownik potwierdza dokonanie wypłaty
-użytkownik odbiera wypłacone pieniądze
-użytkownik wybiera opcje sprawdzenia stanu konta
-użytkownik podaje kwote wpłaty 
-użytkownik wybiera opcje wpłaty pieniędzy
-użytkownik wpłaca pieniądze
-użytkownik wybiera opcje zakupu kodu podarunkowego
-użytkownik użytkownik wybiera producenta kodu podarunkowego
-użytkownik odbiera kod podarunkowy
-użytkownik wybiera opcje wydruku historii rachunków
-użytkownik odbiara wydruk historii rachunków
-pracownik loguje się do panelu pracownika
-pracownik wybiera opcje wyłączenie systemu
-pracownik wylogowuje się
-pracownik wybiera opcje włączenia systemu
+użytkownik wkłada kartę - A
+użytkownik wprowadza pin - M 
+użytkownik wybiera opcje dokonania przelewu - T
+użytkownik wprowadza dane potrzebne do wykonania przelewu(tytuł,numer konta odbiorcy,kwotę) - A
+użytkownik zleca wykonanie przelewu - M
+użytkownik odbiera potwierdzenie - T
+użytkownik odbiera karte - A
+użytkownik wybiera opcje wypłaty pieniedzy - M
+użytkownik podaje kwote wypłaty - T
+użytkownik potwierdza dokonanie wypłaty - A
+użytkownik odbiera wypłacone pieniądze - M
+użytkownik wybiera opcje sprawdzenia stanu konta - T
+użytkownik podaje kwote wpłaty - A
+użytkownik wybiera opcje wpłaty pieniędzy - M
+użytkownik wpłaca pieniądze - T
+użytkownik wybiera opcje zakupu kodu podarunkowego - A
+użytkownik użytkownik wybiera producenta kodu podarunkowego -M
+użytkownik odbiera kod podarunkowy - T
+użytkownik wybiera opcje wydruku historii rachunków - A
+użytkownik odbiara wydruk historii rachunków - M
+pracownik loguje się do panelu pracownika - T
+pracownik wybiera opcje wyłączenie systemu - A
+pracownik wylogowuje się - M
+pracownik wybiera opcje włączenia systemu - T
